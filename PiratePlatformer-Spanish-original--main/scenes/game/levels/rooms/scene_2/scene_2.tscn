@@ -67,13 +67,13 @@ layer_1/tile_data = PackedInt32Array(1114140, 2, 0, 655394, 2, 0, 786451, 2, 0, 
 
 [node name="DoorChangeScene" parent="." instance=ExtResource("6_6vihd")]
 z_index = -1
-position = Vector2(1067, 526)
+position = Vector2(1051, 514)
 _path_to_scene = "res://scenes/game/levels/rooms/scene_3/scene_3.tscn"
 
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Crabby" parent="Enemies" instance=ExtResource("4_cmc0y")]
-position = Vector2(1013, 555)
+position = Vector2(894, 564)
 animation = "idle"
 moving_direction = "left"
 
@@ -206,7 +206,7 @@ position = Vector2(143, 273)
 position = Vector2(431, 152)
 
 [node name="FrontPalmTree5" parent="Objects/FrontPalm" instance=ExtResource("4_6u8cq")]
-position = Vector2(911, 535)
+position = Vector2(911, 531)
 
 [node name="Chest" type="Sprite2D" parent="Objects"]
 position = Vector2(664, 399)
@@ -229,7 +229,7 @@ motion_mirroring = Vector2(1150, 0)
 
 [node name="Bg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -1
-position = Vector2(498, 364)
+position = Vector2(471, -194)
 scale = Vector2(3.07552, 5.17188)
 texture = ExtResource("1_a12cs")
 
