@@ -1,11 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1d750o6hts76"]
+[gd_scene load_steps=14 format=3 uid="uid://b1d750o6hts76"]
 
-[ext_resource type="Texture2D" uid="uid://twt26fk45ipe" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/terrain/background.png" id="1_f4x57"]
 [ext_resource type="TileSet" uid="uid://bx1rsqucrwm2i" path="res://assets/resources/bg_tile_set.tres" id="1_mv2rp"]
-[ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="2_e4qjl"]
-[ext_resource type="Texture2D" uid="uid://d4b3bj7q8gd6b" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/terrain/midground.png" id="2_m2kwh"]
 [ext_resource type="PackedScene" uid="uid://8rbt5lmdrp0s" path="res://scenes/game/camera/camera.tscn" id="3_nj4wd"]
+[ext_resource type="PackedScene" uid="uid://bo37g7mv4j6pn" path="res://scenes/game/enemy/crabby.tscn" id="5_1kqv6"]
 [ext_resource type="Texture2D" uid="uid://b75h8vrjn38mw" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/terrain/props.png" id="6_bp60h"]
+[ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="11_duvub"]
+[ext_resource type="Texture2D" uid="uid://j7leg7yf2oqb" path="res://scenes/game/levels/rooms/scene_3/backgraund/background1.png" id="63_8frv8"]
+[ext_resource type="Texture2D" uid="uid://dconte2plyrhw" path="res://scenes/game/levels/rooms/scene_3/backgraund/background2.png" id="64_fhcko"]
+[ext_resource type="Texture2D" uid="uid://bg5waun3kttn0" path="res://scenes/game/levels/rooms/scene_3/backgraund/background3.png" id="65_8y3ab"]
+[ext_resource type="Texture2D" uid="uid://b3m4jsaou3bkf" path="res://scenes/game/levels/rooms/scene_3/backgraund/background4a.png" id="66_5oixa"]
+[ext_resource type="Texture2D" uid="uid://c23xj7i8kc45d" path="res://scenes/game/levels/rooms/scene_3/backgraund/background4b.png" id="67_00io6"]
 
 [sub_resource type="TileSet" id="TileSet_k03pn"]
 
@@ -678,29 +682,17 @@ texture = ExtResource("6_bp60h")
 sources/0 = SubResource("TileSetAtlasSource_2l1ag")
 
 [node name="Main" type="Node2D"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(1555, 615)
-scale = Vector2(11.2292, 5.11719)
-texture = ExtResource("1_f4x57")
-
-[node name="Midground" type="Sprite2D" parent="."]
-position = Vector2(1589.5, 570.5)
-scale = Vector2(3.25521, 2.67773)
-texture = ExtResource("2_m2kwh")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(1, 0)
 tile_set = ExtResource("1_mv2rp")
+rendering_quadrant_size = 9
 format = 2
-layer_0/tile_data = PackedInt32Array(1245212, 458752, 4, 1245213, 524288, 4, 1245214, 589824, 4, 1245215, 655360, 4, 1114113, 0, 5, 1114114, 65536, 5, 1114115, 131072, 5, 1114116, 196608, 5, 1114117, 262144, 5, 1114118, 327680, 5, 1114119, 0, 5, 1114120, 65536, 5, 1114121, 131072, 5, 1114122, 196608, 5, 1114123, 262144, 5, 1114124, 0, 5, 1114125, 65536, 5, 1114126, 131072, 5, 1114127, 851972, 8, 1114128, 917508, 8, 1114129, 983044, 8, 655375, 851972, 1, 720911, 851972, 2, 786447, 851972, 3, 851983, 851972, 4, 917519, 851972, 5, 983055, 851972, 6, 1048591, 851972, 7, 655376, 917508, 1, 720912, 917508, 2, 786448, 917508, 3, 851984, 917508, 4, 917520, 917508, 5, 983056, 917508, 6, 1048592, 917508, 7, 655377, 983044, 1, 720913, 983044, 2, 786449, 983044, 3, 851985, 983044, 4, 917521, 983044, 5, 983057, 983044, 6, 1048593, 983044, 7, 655378, 1048580, 1, 720914, 1048580, 2, 786450, 1048580, 3, 851986, 1048580, 4, 917522, 1048580, 5, 983058, 1048580, 6, 1048594, 1048580, 7, 1114130, 1048580, 8)
+layer_0/tile_data = PackedInt32Array(1114113, 0, 5, 1114114, 65536, 5, 1114116, 262145, 16, 1114118, 262145, 16, 1114119, 262145, 16, 1114120, 65536, 5, 1114121, 131072, 5, 1114122, 196608, 5, 1114123, 262144, 5, 1114124, 0, 5, 1114125, 65536, 5, 1114126, 131072, 5, 655376, 1572865, 0, 655377, 1638401, 0, 655378, 1703937, 0, 655375, 1769473, 0, 1114127, 3, 0, 1114128, 65539, 0, 1114129, 131075, 0, 1114130, 3, 0, 1114131, 65539, 0, 1114132, 131075, 0, 1114133, 3, 0, 1114134, 65539, 0, 1114135, 131075, 0, 1179672, 3, 0, 1179673, 65539, 0, 1179674, 131075, 0, 1179677, 131075, 0, 1114144, 65539, 0, 1114145, 131075, 0, 917540, 3, 0, 917541, 65539, 0, 917542, 131075, 0, 851995, 3, 0, 851996, 65539, 0, 851997, 131075, 0, 655393, 3, 0, 655394, 65539, 0, 655395, 131075, 0, 720916, 3, 0, 720917, 65539, 0, 720918, 131075, 0, 917513, 1572865, 0, 917514, 1638401, 0, 917515, 1703937, 0, 917516, 1638401, 0, 917517, 1703937, 0, 917518, 1769473, 0, 917519, 1835009, 0, 917520, 1638401, 0, 917521, 1703937, 0, 917522, 1769473, 0, 917523, 1835009, 0, 917508, 1507329, 0, 917509, 1507329, 0, 917510, 1572865, 0, 917511, 1638401, 0, 917512, 1507329, 0, 851976, 1638401, 0, 851977, 1703937, 0, 851975, 1572865, 0, 851978, 1769473, 0, 851979, 1835009, 0, 851980, 1769473, 0, 851981, 1835009, 0, 851982, 1703937, 0, 851983, 1769473, 0, 851984, 1835009, 0, 851985, 1835009, 0, 851986, 1835009, 0, 851974, 1507329, 0, 720908, 1572865, 0, 720909, 1638401, 0, 720910, 1703937, 0, 720911, 1769473, 0, 720912, 1835009, 0, 720903, 1507329, 0, 720904, 1572865, 0, 720905, 1638401, 0, 720906, 1703937, 0, 720907, 1769473, 0, 1048574, 1507329, 0, 1048575, 1572865, 0, 983040, 1638401, 0, 983041, 1703937, 0, 983042, 1769473, 0, 655368, 1507329, 0, 655369, 1572865, 0, 655370, 1638401, 0, 655371, 1703937, 0, 655372, 1572865, 0, 655373, 1638401, 0, 655374, 1703937, 0, 655379, 1769473, 0, 655380, 1572865, 0, 655381, 1638401, 0, 655382, 1703937, 0, 655383, 1769473, 0, 655384, 1835009, 0, 1114115, 262145, 16, 1048579, 458753, 11, 1048580, 458753, 11, 1048582, 458753, 11, 1048583, 458753, 11)
 layer_1/tile_data = PackedInt32Array(327691, 0, 0, 327692, 65536, 0, 1114125, 0, 4, 1114126, 65536, 4, 1114127, 131072, 4, 1114128, 196608, 4, 1114129, 262144, 4, 1114130, 327680, 4)
 
-[node name="MainCharacter" parent="." instance=ExtResource("2_e4qjl")]
-position = Vector2(62, 488)
-
-[node name="Camera2D" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_nj4wd")]
-character = NodePath("../MainCharacter")
+[node name="MainCharacter" parent="." instance=ExtResource("11_duvub")]
+position = Vector2(120, 521)
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_k03pn")
@@ -709,4 +701,66 @@ format = 2
 [node name="TileMap3" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_56vat")
 format = 2
-layer_0/tile_data = PackedInt32Array(1310733, 1769472, 3, 1376269, 1769472, 4, 1441805, 1769472, 5, 1507341, 1769472, 6, 1572877, 1769472, 7, 1638413, 1769472, 8, 1703949, 1769472, 9, 1769485, 1769472, 10, 1835021, 1769472, 11, 1900557, 1769472, 12, 1966093, 1769472, 13, 2031629, 1769472, 14, 2097165, 1769472, 15, 2162701, 1769472, 16, 1245198, 1835008, 2, 1310734, 1835008, 3, 1376270, 1835008, 4, 1441806, 1835008, 5, 1507342, 1835008, 6, 1572878, 1835008, 7, 1638414, 1835008, 8, 1703950, 1835008, 9, 1769486, 1835008, 10, 1835022, 1835008, 11, 1900558, 1835008, 12, 1966094, 1835008, 13, 2031630, 1835008, 14, 2097166, 1835008, 15, 2162702, 1835008, 16, 1245199, 1900544, 2, 1310735, 1900544, 3, 1376271, 1900544, 4, 1441807, 1900544, 5, 1507343, 1900544, 6, 1572879, 1900544, 7, 1638415, 1900544, 8, 1703951, 1900544, 9, 1769487, 1900544, 10, 1835023, 1900544, 11, 1900559, 1900544, 12, 1966095, 1900544, 13, 2031631, 1900544, 14, 2097167, 1900544, 15, 2162703, 1900544, 16, 1245200, 1966080, 2, 1310736, 1966080, 3, 1376272, 1966080, 4, 1441808, 1966080, 5, 1507344, 1966080, 6, 1572880, 1966080, 7, 1638416, 1966080, 8, 1703952, 1966080, 9, 1769488, 1966080, 10, 1835024, 1966080, 11, 1900560, 1966080, 12, 1966096, 1966080, 13, 2031632, 1966080, 14, 2097168, 1966080, 15, 2162704, 1966080, 16, 1245201, 2031616, 2, 1310737, 2031616, 3, 1376273, 2031616, 4, 1441809, 2031616, 5, 1507345, 2031616, 6, 1572881, 2031616, 7, 1638417, 2031616, 8, 1703953, 2031616, 9, 1769489, 2031616, 10, 1835025, 2031616, 11, 1900561, 2031616, 12, 1966097, 2031616, 13, 2031633, 2031616, 14, 2097169, 2031616, 15, 2162705, 2031616, 16, 1310738, 2097152, 3, 1376274, 2097152, 4, 1507346, 2097152, 6, 1572882, 2097152, 7, 1638418, 2097152, 8, 1703954, 2097152, 9, 1769490, 2097152, 10, 1835026, 2097152, 11, 1900562, 2097152, 12, 1966098, 2097152, 13, 2031634, 2097152, 14, 2097170, 2097152, 15, 2162706, 2097152, 16, 1376278, 1769472, 3, 1441814, 1769472, 4, 1507350, 1769472, 5, 1572886, 1769472, 6, 1638422, 1769472, 7, 1703958, 1769472, 8, 1769494, 1769472, 9, 1835030, 1769472, 10, 1900566, 1769472, 11, 1966102, 1769472, 12, 2031638, 1769472, 13, 2097174, 1769472, 14, 2162710, 1769472, 15, 2228246, 1769472, 16, 1310743, 1835008, 2, 1376279, 1835008, 3, 1441815, 1835008, 4, 1507351, 1835008, 5, 1572887, 1835008, 6, 1638423, 1835008, 7, 1703959, 1835008, 8, 1769495, 1835008, 9, 1835031, 1835008, 10, 1900567, 1835008, 11, 1966103, 1835008, 12, 2031639, 1835008, 13, 2097175, 1835008, 14, 2162711, 1835008, 15, 2228247, 1835008, 16, 1310744, 1900544, 2, 1376280, 1900544, 3, 1441816, 1900544, 4, 1507352, 1900544, 5, 1572888, 1900544, 6, 1638424, 1900544, 7, 1703960, 1900544, 8, 1769496, 1900544, 9, 1835032, 1900544, 10, 1900568, 1900544, 11, 1966104, 1900544, 12, 2031640, 1900544, 13, 2097176, 1900544, 14, 2162712, 1900544, 15, 2228248, 1900544, 16, 1310745, 1966080, 2, 1376281, 1966080, 3, 1441817, 1966080, 4, 1507353, 1966080, 5, 1572889, 1966080, 6, 1638425, 1966080, 7, 1703961, 1966080, 8, 1769497, 1966080, 9, 1835033, 1966080, 10, 1900569, 1966080, 11, 1966105, 1966080, 12, 2031641, 1966080, 13, 2097177, 1966080, 14, 2162713, 1966080, 15, 2228249, 1966080, 16, 1310746, 2031616, 2, 1376282, 2031616, 3, 1441818, 2031616, 4, 1507354, 2031616, 5, 1572890, 2031616, 6, 1638426, 2031616, 7, 1703962, 2031616, 8, 1769498, 2031616, 9, 1835034, 2031616, 10, 1900570, 2031616, 11, 1966106, 2031616, 12, 2031642, 2031616, 13, 2097178, 2031616, 14, 2162714, 2031616, 15, 2228250, 2031616, 16, 1376283, 2097152, 3, 1441819, 2097152, 4, 1572891, 2097152, 6, 1638427, 2097152, 7, 1703963, 2097152, 8, 1769499, 2097152, 9, 1835035, 2097152, 10, 1900571, 2097152, 11, 1966107, 2097152, 12, 2031643, 2097152, 13, 2097179, 2097152, 14, 2162715, 2097152, 15, 2228251, 2097152, 16)
+layer_0/tile_data = PackedInt32Array(1376283, 2097152, 3, 2031643, 2097152, 13)
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_nj4wd")]
+position = Vector2(324, 395)
+limit_right = 1800
+character = NodePath("../MainCharacter")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Crabby" parent="Enemies" instance=ExtResource("5_1kqv6")]
+position = Vector2(894, 564)
+animation = "idle"
+moving_direction = "left"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(0.93, 1)
+transform = Transform2D(0.93, 0, 0, 1, 0, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-47.3118, 115)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(890, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("63_8frv8")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-47.3118, 115)
+motion_scale = Vector2(0.14, 1)
+motion_mirroring = Vector2(900, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("64_fhcko")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-47.3118, 115)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(900, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("65_8y3ab")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-47.3118, 115)
+motion_scale = Vector2(0.22, 1)
+motion_mirroring = Vector2(900, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture = ExtResource("66_5oixa")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-47.3118, 115)
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(900, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+scale = Vector2(1, 1.00231)
+texture = ExtResource("67_00io6")
+centered = false
