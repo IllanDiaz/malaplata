@@ -104,7 +104,7 @@ position = Vector2(843, 140)
 animation = "green_diamond"
 
 [node name="SilverCoin" parent="CollectableObjects" instance=ExtResource("6_6sl3g")]
-position = Vector2(276, 509)
+position = Vector2(276, 499)
 animation = "silver_coin"
 
 [node name="BlueDiamond" parent="CollectableObjects" instance=ExtResource("6_6sl3g")]
@@ -219,9 +219,10 @@ texture = ExtResource("11_4ker5")
 [node name="DieArea" type="Node2D" parent="."]
 
 [node name="Death" parent="DieArea" instance=ExtResource("16_kwprd")]
-position = Vector2(247, 668)
+position = Vector2(250, 679)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.1, 0.1)
@@ -229,7 +230,7 @@ motion_mirroring = Vector2(1150, 0)
 
 [node name="Bg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -1
-position = Vector2(471, -194)
+position = Vector2(508, 332)
 scale = Vector2(3.07552, 5.17188)
 texture = ExtResource("1_a12cs")
 

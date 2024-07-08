@@ -193,7 +193,7 @@ position = Vector2(1116, 328)
 animation = "red_diamond"
 
 [node name="RedPotion" parent="Collectibles" instance=ExtResource("20_1tp5l")]
-position = Vector2(416, 432)
+position = Vector2(416, 429)
 
 [node name="RedPotion2" parent="Collectibles" instance=ExtResource("20_1tp5l")]
 position = Vector2(1350, 437)
